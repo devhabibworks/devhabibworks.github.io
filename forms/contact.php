@@ -24,6 +24,8 @@ $contact->from_name = $_POST['name'];
 $contact->from_email = $_POST['email'];
 $contact->subject = $_POST['subject'];
 
+print_r($contact);
+
 // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
 
 // Gmail SMTP server address: smtp.gmail.com
@@ -33,12 +35,12 @@ $contact->subject = $_POST['subject'];
 // Gmail SMTP port (TLS): 587
 // Gmail SMTP port (SSL): 465
 
-$contact->smtp = array(
-  'host' => 'smtp.gmail.com',
-  'username' => 'habibsaeed2023@gmail.com',
-  'password' => 'as u like dog',
-  'port' => '25'
-);
+// $contact->smtp = array(
+//   'host' => 'smtp.gmail.com',
+//   'username' => 'habibsaeed2023@gmail.com',
+//   'password' => 'password',
+//   'port' => '25'
+// );
 
 
 $contact->add_message($_POST['name'], 'From');
